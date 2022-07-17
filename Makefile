@@ -1,4 +1,5 @@
-all: desktop
-
 desktop:
-	./scripts/start-client.sh
+	./scripts/run-executor.sh
+
+builder:
+	./scripts/run-builder.sh

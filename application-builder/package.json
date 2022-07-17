@@ -1,0 +1,25 @@
+{
+  "name": "synergy",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.js",
+  "main": "../application-executor/www/application.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "parcel watch",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zimtir/synergy.git"
+  },
+  "author": "Marat Zimnurov <zimtir@mail.ru>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Zimtir/synergy/issues"
+  },
+  "homepage": "https://github.com/Zimtir/synergy#readme",
+  "devDependencies": {
+    "parcel": "^2.6.2"
+  }
+}
