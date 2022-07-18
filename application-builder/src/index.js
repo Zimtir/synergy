@@ -1,7 +1,3 @@
-const application = document.getElementById("application");
-if (!application) {
-  alert("no app box provided");
-  return;
-}
+import { initApplication } from "../../application-source";
 
-application.innerHTML = "<h1>Hello</h1>";
+initApplication();

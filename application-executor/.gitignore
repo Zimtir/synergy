@@ -14,3 +14,5 @@ neutralino.js
 .tmp/*
 ./www/application-source
 application.js*
+
+.DS_Store

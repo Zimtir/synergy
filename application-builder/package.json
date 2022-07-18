@@ -21,5 +21,8 @@
   "homepage": "https://github.com/Zimtir/synergy#readme",
   "devDependencies": {
     "parcel": "^2.6.2"
+  },
+  "dependencies": {
+    "application-source": "file:../application-source"
   }
 }
