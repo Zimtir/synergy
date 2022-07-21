@@ -9,3 +9,6 @@ dependencies:
 
 build:
 	./scripts/build-client.sh
+
+release:
+	./scripts/prepare-release.sh
