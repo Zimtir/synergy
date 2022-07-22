@@ -35,7 +35,12 @@
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
-    "@semantic-release/changelog",
+    [
+      "@semantic-release/changelog",
+      {
+        "changelogFile": "CHANGELOG.md"
+      }
+    ],
     {
       "path": "@semantic-release/git",
       "assets": [
@@ -47,17 +52,16 @@
       "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
     },
     "@semantic-release/github",
-    "@semantic-release/npm",
-    [
-      "@qiwi/semantic-release-gh-pages-plugin",
-      {
-        "msg": "updated",
-        "branch": "web",
-        "src": "dist/web"
-      }
-    ]
+    "@semantic-release/npm"
   ],
   "release": {
+    "verifyConditions": [
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git",
+      "@semantic-release/github",
+      "@qiwi/semantic-release-gh-pages-plugin"
+    ],
     "publish": [
       "@semantic-release/npm",
       {
@@ -66,7 +70,15 @@
           "CHANGELOG.md",
           "dist/desktop/*"
         ]
-      }
+      },
+      [
+        "@qiwi/semantic-release-gh-pages-plugin",
+        {
+          "msg": "updated",
+          "branch": "web",
+          "src": "dist/web"
+        }
+      ]
     ]
   },
   "files": [
