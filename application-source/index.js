@@ -10,6 +10,8 @@ export const initApplication = (host, version) => {
 
     link.href = bundle.url;
     link.innerText = bundle.name;
+    link.download = bundle.url;
+    link.style.margin = "10px";
 
     return link;
   });

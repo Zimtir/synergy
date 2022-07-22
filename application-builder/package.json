@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/Zimtir/synergy/issues"
   },
-  "homepage": "https://github.com/Zimtir/synergy#readme",
+  "homepage": "https://github.com/Zimtir/synergy",
   "devDependencies": {
     "@qiwi/semantic-release-gh-pages-plugin": "^5.2.3",
     "@semantic-release/changelog": "^6.0.1",
