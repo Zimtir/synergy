@@ -32,43 +32,6 @@
   "dependencies": {
     "application-source": "file:../application-source"
   },
-  "plugins": [
-    "@semantic-release/commit-analyzer",
-    "@semantic-release/release-notes-generator",
-    "@semantic-release/changelog",
-    {
-      "path": "@semantic-release/git",
-      "assets": [
-        "package.json",
-        "package-lock.json",
-        "CHANGELOG.md",
-        "dist/desktop/*"
-      ],
-      "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
-    },
-    "@semantic-release/github",
-    "@semantic-release/npm",
-    [
-      "@qiwi/semantic-release-gh-pages-plugin",
-      {
-        "msg": "updated",
-        "branch": "web",
-        "src": "dist/web"
-      }
-    ]
-  ],
-  "release": {
-    "publish": [
-      "@semantic-release/npm",
-      {
-        "path": "@semantic-release/github",
-        "assets": [
-          "CHANGELOG.md",
-          "dist/desktop/*"
-        ]
-      }
-    ]
-  },
   "files": [
     "README.md",
     "LICENSE",
