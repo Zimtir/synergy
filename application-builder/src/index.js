@@ -1,3 +1,5 @@
+import packageJson from "../package.json";
+
 import { initApplication } from "../../application-source";
 
-initApplication();
+initApplication(packageJson.homepage, packageJson.version);
